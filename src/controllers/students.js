@@ -8,7 +8,7 @@ import {
 import createHttpError from 'http-errors';
 import { parsePaginationParams } from '../utils/parsePaginationParams.js';
 
-export const getSudentsController = async (req, res, next) => {
+export const getStudentsController = async (req, res, next) => {
   try {
     const students = await getAllStudents();
 

@@ -4,7 +4,7 @@ import {
   createStudentController,
   deleteStudentController,
   getStudentByIdController,
-  // getSudentsController,
+  getStudentsController,
   patchStudentController,
   upsertStudentController,
 } from '../controllers/students.js';
@@ -17,7 +17,7 @@ import {
 import { isValidId } from '../middlewares/isValidId.js';
 
 const router = Router();
-// router.get('/students', getSudentsController);
+router.get('/students', getStudentsController);
 router.get(
   '/students/:studentId',
   isValidId,
@@ -28,7 +28,7 @@ router.post(
   validateBody(createStudentSchema),
   ctrlWrapper(createStudentController),
 );
-router.delete('/student/:studentId', ctrlWrapper(deleteStudentController));
+router.delete('/students/:studentId', ctrlWrapper(deleteStudentController));
 router.put(
   '/students/:studentId',
   validateBody(createStudentSchema),
