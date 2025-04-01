@@ -33,6 +33,7 @@ const studentsSchema = new Schema(
       enum: ['TEACHER', 'PARENT'],
       required: true,
     },
+    photo: { type: String },
   },
   {
     timestamps: true,
